@@ -9,8 +9,33 @@ const totalMonthsEl = document.getElementById('total-months');
 const totalDaysEl = document.getElementById('total-days');
 const nextBirthdayEl = document.getElementById('next-birthday');
 
+const openToolsButton = document.getElementById('open-tools');
+const closeToolsButton = document.getElementById('close-tools');
+const toolsModal = document.getElementById('tools-modal');
+
 const today = startOfDay(new Date());
 birthDateInput.max = formatDateForInput(today);
+
+openToolsButton.addEventListener('click', () => {
+  toolsModal.showModal();
+});
+
+closeToolsButton.addEventListener('click', () => {
+  toolsModal.close();
+});
+
+toolsModal.addEventListener('click', (event) => {
+  const rect = toolsModal.getBoundingClientRect();
+  const clickedOutside =
+    event.clientX < rect.left ||
+    event.clientX > rect.right ||
+    event.clientY < rect.top ||
+    event.clientY > rect.bottom;
+
+  if (clickedOutside) {
+    toolsModal.close();
+  }
+});
 
 form.addEventListener('submit', (event) => {
   event.preventDefault();
@@ -155,12 +180,3 @@ function isLeapYear(year) {
 function pluralize(value, word) {
   return value === 1 ? word : `${word}s`;
 }
-
-(() => {
-  if (window.__FREE_TOOLS_WIDGET_LOADER__) return;
-  window.__FREE_TOOLS_WIDGET_LOADER__ = true;
-  const script = document.createElement('script');
-  script.src = 'https://appointments-schedule.netlify.app/tools-widget.js';
-  script.defer = true;
-  document.head.append(script);
-})();
