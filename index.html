@@ -1,6 +1,6 @@
 <!doctype html>
-<html lang="en">
-<head>
+<html id="app-html" lang="en">
+<head id="app-head">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#6d5dfc">
@@ -9,86 +9,86 @@
   <title>Age Calculator - Calculate Your Exact Age</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="#top" aria-label="Age Calculator home">Age Calculator</a>
-      <button class="nav-link" id="open-tools" type="button">EXPLORE MORE TOOLS</button>
+<body id="app-body">
+  <header id="site-header">
+    <div id="header-inner">
+      <a id="brand-link" href="#top" aria-label="Age Calculator home">Age Calculator</a>
+      <button id="open-tools" type="button">EXPLORE MORE TOOLS</button>
     </div>
   </header>
 
-  <main id="top" class="container">
-    <section class="hero" aria-labelledby="page-title">
-      <span class="hero-icon" aria-hidden="true">🎂</span>
+  <main id="top">
+    <section id="hero-section" aria-labelledby="page-title">
+      <span id="hero-icon" aria-hidden="true">🎂</span>
       <h1 id="page-title">Age Calculator</h1>
-      <p>Enter your date of birth and get your exact age instantly.</p>
+      <p id="hero-copy">Enter your date of birth and get your exact age instantly.</p>
     </section>
 
-    <div class="ad-slot" aria-label="Advertisement">Advertisement</div>
+    <div id="ad-slot-top" aria-label="Advertisement">Advertisement</div>
 
-    <section class="calculator-card" aria-labelledby="calculator-title">
+    <section id="calculator-card" aria-labelledby="calculator-title">
       <h2 id="calculator-title">Calculate your age</h2>
       <form id="age-form" novalidate>
-        <div class="field">
-          <label for="birth-date">Date of birth</label>
+        <div id="birth-field">
+          <label id="birth-label" for="birth-date">Date of birth</label>
           <input id="birth-date" name="birthDate" type="date" required>
-          <p id="date-error" class="error" role="alert"></p>
+          <p id="date-error" role="alert"></p>
         </div>
-        <button class="btn-primary" type="submit">Calculate Age</button>
+        <button id="calculate-button" type="submit">Calculate Age</button>
       </form>
 
-      <section id="result" class="result" aria-live="polite" hidden>
-        <p class="result-label">Your age is</p>
-        <div class="age-main"><strong id="years">0</strong><span>Years</span></div>
-        <p id="age-detail" class="age-detail">0 Months · 0 Days</p>
-        <div class="stats-grid">
-          <article class="stat-card"><span>Total Months</span><strong id="total-months">0</strong></article>
-          <article class="stat-card"><span>Total Days</span><strong id="total-days">0</strong></article>
-          <article class="stat-card"><span>Next Birthday</span><strong id="next-birthday">0 days</strong></article>
+      <section id="result" aria-live="polite" hidden>
+        <p id="result-label">Your age is</p>
+        <div id="age-main"><strong id="years">0</strong><span id="years-label">Years</span></div>
+        <p id="age-detail">0 Months · 0 Days</p>
+        <div id="stats-grid">
+          <article id="months-card"><span id="months-card-label">Total Months</span><strong id="total-months">0</strong></article>
+          <article id="days-card"><span id="days-card-label">Total Days</span><strong id="total-days">0</strong></article>
+          <article id="birthday-card"><span id="birthday-card-label">Next Birthday</span><strong id="next-birthday">0 days</strong></article>
         </div>
       </section>
     </section>
 
-    <div class="ad-slot" aria-label="Advertisement">Advertisement</div>
+    <div id="ad-slot-bottom" aria-label="Advertisement">Advertisement</div>
 
-    <section id="how" class="info-card">
-      <h2>How it works</h2>
-      <p>Choose your birth date and tap <strong>Calculate Age</strong>. The calculator shows your age using today’s date.</p>
+    <section id="how-section">
+      <h2 id="how-title">How it works</h2>
+      <p id="how-copy">Choose your birth date and tap <strong id="how-button-name">Calculate Age</strong>. The calculator shows your age using today’s date.</p>
     </section>
 
-    <section class="info-card faq" aria-labelledby="faq-title">
+    <section id="faq-section" aria-labelledby="faq-title">
       <h2 id="faq-title">Age Calculator FAQ</h2>
-      <details><summary>How is my age calculated?</summary><p>Your age is calculated from your birth date to today in completed years, months and days.</p></details>
-      <details><summary>Does the calculator save my date of birth?</summary><p>No. Your date is calculated in your browser and is not stored by this tool.</p></details>
-      <details><summary>Is this age calculator free?</summary><p>Yes. You can use it as often as you like.</p></details>
+      <details id="faq-item-1"><summary id="faq-summary-1">How is my age calculated?</summary><p id="faq-copy-1">Your age is calculated from your birth date to today in completed years, months and days.</p></details>
+      <details id="faq-item-2"><summary id="faq-summary-2">Does the calculator save my date of birth?</summary><p id="faq-copy-2">No. Your date is calculated in your browser and is not stored by this tool.</p></details>
+      <details id="faq-item-3"><summary id="faq-summary-3">Is this age calculator free?</summary><p id="faq-copy-3">Yes. You can use it as often as you like.</p></details>
     </section>
   </main>
 
-  <dialog class="tools-modal" id="tools-modal" aria-labelledby="more-tools-title">
-    <div class="tools-modal-inner">
-      <button class="modal-close" id="close-tools" type="button" aria-label="Close tools">×</button>
-      <div class="tools-heading">
+  <dialog id="tools-modal" aria-labelledby="more-tools-title">
+    <div id="tools-modal-inner">
+      <button id="close-tools" type="button" aria-label="Close tools">×</button>
+      <div id="tools-heading">
         <h2 id="more-tools-title">Explore More Tools</h2>
-        <p>Fast, simple tools for everyday tasks.</p>
+        <p id="tools-copy">Fast, simple tools for everyday tasks.</p>
       </div>
 
-      <div class="tools-grid">
-        <a class="tool-card tool-purple" href="https://appointments-schedule.netlify.app/"><span class="tool-icon">📅</span><span><strong>Appointment Scheduler</strong><small>Plan appointments fast</small></span><b>→</b></a>
-        <a class="tool-card tool-pink" href="https://pdf-merging.netlify.app/"><span class="tool-icon">📄</span><span><strong>PDF Merger</strong><small>Merge PDF files quickly</small></span><b>→</b></a>
-        <a class="tool-card tool-orange" href="https://picture-compression.netlify.app/"><span class="tool-icon">🖼️</span><span><strong>Image Compressor</strong><small>Reduce image file size</small></span><b>→</b></a>
-        <a class="tool-card tool-sky" href="https://camera-calc.netlify.app/"><span class="tool-icon">📷</span><span><strong>Camera Calculator</strong><small>Plan camera storage</small></span><b>→</b></a>
-        <a class="tool-card tool-mint" href="https://unscramble-words.netlify.app/"><span class="tool-icon">🔤</span><span><strong>Unscramble Words</strong><small>Solve scrambled words</small></span><b>→</b></a>
-        <a class="tool-card tool-purple" href="https://qr-code222.netlify.app/"><span class="tool-icon">▦</span><span><strong>QR Code Generator</strong><small>Create QR codes fast</small></span><b>→</b></a>
-        <a class="tool-card tool-pink" href="https://case-converter222.netlify.app/"><span class="tool-icon">Aa</span><span><strong>Case Converter</strong><small>Change text case instantly</small></span><b>→</b></a>
-        <a class="tool-card tool-yellow" href="https://electric-calc.netlify.app/"><span class="tool-icon">⚡</span><span><strong>Electricity Calculator</strong><small>Estimate electricity cost</small></span><b>→</b></a>
-        <a class="tool-card tool-sky" href="https://unitss-converters.netlify.app/"><span class="tool-icon">📏</span><span><strong>Unit Converter</strong><small>Convert common units</small></span><b>→</b></a>
-        <a class="tool-card tool-mint" href="https://keywordcalculator.netlify.app/"><span class="tool-icon">🔎</span><span><strong>Keyword Calculator</strong><small>Check keyword density</small></span><b>→</b></a>
-        <a class="tool-card tool-orange" href="https://saving-calculation.netlify.app/"><span class="tool-icon">💰</span><span><strong>Savings Calculator</strong><small>Estimate your savings growth</small></span><b>→</b></a>
+      <div id="tools-grid">
+        <a id="tool-appointment" href="https://appointments-schedule.netlify.app/"><span id="tool-appointment-icon">📅</span><span id="tool-appointment-copy"><strong id="tool-appointment-title">Appointment Scheduler</strong><small id="tool-appointment-desc">Plan appointments fast</small></span><b id="tool-appointment-arrow">→</b></a>
+        <a id="tool-pdf" href="https://pdf-merging.netlify.app/"><span id="tool-pdf-icon">📄</span><span id="tool-pdf-copy"><strong id="tool-pdf-title">PDF Merger</strong><small id="tool-pdf-desc">Merge PDF files quickly</small></span><b id="tool-pdf-arrow">→</b></a>
+        <a id="tool-image" href="https://picture-compression.netlify.app/"><span id="tool-image-icon">🖼️</span><span id="tool-image-copy"><strong id="tool-image-title">Image Compressor</strong><small id="tool-image-desc">Reduce image file size</small></span><b id="tool-image-arrow">→</b></a>
+        <a id="tool-camera" href="https://camera-calc.netlify.app/"><span id="tool-camera-icon">📷</span><span id="tool-camera-copy"><strong id="tool-camera-title">Camera Calculator</strong><small id="tool-camera-desc">Plan camera storage</small></span><b id="tool-camera-arrow">→</b></a>
+        <a id="tool-unscramble" href="https://unscramble-words.netlify.app/"><span id="tool-unscramble-icon">🔤</span><span id="tool-unscramble-copy"><strong id="tool-unscramble-title">Unscramble Words</strong><small id="tool-unscramble-desc">Solve scrambled words</small></span><b id="tool-unscramble-arrow">→</b></a>
+        <a id="tool-qr" href="https://qr-code222.netlify.app/"><span id="tool-qr-icon">▦</span><span id="tool-qr-copy"><strong id="tool-qr-title">QR Code Generator</strong><small id="tool-qr-desc">Create QR codes fast</small></span><b id="tool-qr-arrow">→</b></a>
+        <a id="tool-case" href="https://case-converter222.netlify.app/"><span id="tool-case-icon">Aa</span><span id="tool-case-copy"><strong id="tool-case-title">Case Converter</strong><small id="tool-case-desc">Change text case instantly</small></span><b id="tool-case-arrow">→</b></a>
+        <a id="tool-electric" href="https://electric-calc.netlify.app/"><span id="tool-electric-icon">⚡</span><span id="tool-electric-copy"><strong id="tool-electric-title">Electricity Calculator</strong><small id="tool-electric-desc">Estimate electricity cost</small></span><b id="tool-electric-arrow">→</b></a>
+        <a id="tool-unit" href="https://unitss-converters.netlify.app/"><span id="tool-unit-icon">📏</span><span id="tool-unit-copy"><strong id="tool-unit-title">Unit Converter</strong><small id="tool-unit-desc">Convert common units</small></span><b id="tool-unit-arrow">→</b></a>
+        <a id="tool-keyword" href="https://keywordcalculator.netlify.app/"><span id="tool-keyword-icon">🔎</span><span id="tool-keyword-copy"><strong id="tool-keyword-title">Keyword Calculator</strong><small id="tool-keyword-desc">Check keyword density</small></span><b id="tool-keyword-arrow">→</b></a>
+        <a id="tool-savings" href="https://saving-calculation.netlify.app/"><span id="tool-savings-icon">💰</span><span id="tool-savings-copy"><strong id="tool-savings-title">Savings Calculator</strong><small id="tool-savings-desc">Estimate your savings growth</small></span><b id="tool-savings-arrow">→</b></a>
       </div>
     </div>
   </dialog>
 
-  <footer class="site-footer"><div class="container"><p>Age Calculator · Free online tool</p></div></footer>
+  <footer id="site-footer"><div id="footer-inner"><p id="footer-copy">Age Calculator · Free online tool</p></div></footer>
   <script src="app.js"></script>
 </body>
 </html>
