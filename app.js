@@ -56,21 +56,45 @@ function showError(message) {
 
 function getExactAge(birthDate, currentDate) {
   let years = currentDate.getFullYear() - birthDate.getFullYear();
-  let months = currentDate.getMonth() - birthDate.getMonth();
-  let days = currentDate.getDate() - birthDate.getDate();
+  let cursor = addYearsClamped(birthDate, years);
 
-  if (days < 0) {
-    months -= 1;
-    const previousMonth = new Date(currentDate.getFullYear(), currentDate.getMonth(), 0);
-    days += previousMonth.getDate();
-  }
-
-  if (months < 0) {
+  if (cursor > currentDate) {
     years -= 1;
-    months += 12;
+    cursor = addYearsClamped(birthDate, years);
   }
 
-  return { years, months, days };
+  let months = 0;
+  while (months < 11) {
+    const nextMonth = addMonthsClamped(cursor, 1);
+    if (nextMonth > currentDate) break;
+    cursor = nextMonth;
+    months += 1;
+  }
+
+  return {
+    years,
+    months,
+    days: daysBetween(cursor, currentDate)
+  };
+}
+
+function addYearsClamped(date, years) {
+  const targetYear = date.getFullYear() + years;
+  const month = date.getMonth();
+  const day = Math.min(date.getDate(), daysInMonth(targetYear, month));
+  return new Date(targetYear, month, day);
+}
+
+function addMonthsClamped(date, months) {
+  const firstOfTarget = new Date(date.getFullYear(), date.getMonth() + months, 1);
+  const year = firstOfTarget.getFullYear();
+  const month = firstOfTarget.getMonth();
+  const day = Math.min(date.getDate(), daysInMonth(year, month));
+  return new Date(year, month, day);
+}
+
+function daysInMonth(year, month) {
+  return new Date(year, month + 1, 0).getDate();
 }
 
 function getDaysUntilNextBirthday(birthDate, currentDate) {
