@@ -46,18 +46,9 @@
         <p id="age-detail" class="age-detail">0 Months · 0 Days</p>
 
         <div class="stats-grid">
-          <article class="stat-card">
-            <span>Total Months</span>
-            <strong id="total-months">0</strong>
-          </article>
-          <article class="stat-card">
-            <span>Total Days</span>
-            <strong id="total-days">0</strong>
-          </article>
-          <article class="stat-card">
-            <span>Next Birthday</span>
-            <strong id="next-birthday">0 days</strong>
-          </article>
+          <article class="stat-card"><span>Total Months</span><strong id="total-months">0</strong></article>
+          <article class="stat-card"><span>Total Days</span><strong id="total-days">0</strong></article>
+          <article class="stat-card"><span>Next Birthday</span><strong id="next-birthday">0 days</strong></article>
         </div>
       </section>
     </section>
@@ -71,37 +62,55 @@
 
     <section class="info-card faq" aria-labelledby="faq-title">
       <h2 id="faq-title">Age Calculator FAQ</h2>
-      <details>
-        <summary>How is my age calculated?</summary>
-        <p>Your age is calculated from your birth date to today in completed years, months and days.</p>
-      </details>
-      <details>
-        <summary>Does the calculator save my date of birth?</summary>
-        <p>No. Your date is calculated in your browser and is not stored by this tool.</p>
-      </details>
-      <details>
-        <summary>Is this age calculator free?</summary>
-        <p>Yes. You can use it as often as you like.</p>
-      </details>
+      <details><summary>How is my age calculated?</summary><p>Your age is calculated from your birth date to today in completed years, months and days.</p></details>
+      <details><summary>Does the calculator save my date of birth?</summary><p>No. Your date is calculated in your browser and is not stored by this tool.</p></details>
+      <details><summary>Is this age calculator free?</summary><p>Yes. You can use it as often as you like.</p></details>
     </section>
 
-    <section id="more-tools" class="info-card" aria-labelledby="more-tools-title">
-      <h2 id="more-tools-title">Explore More Tools</h2>
-      <p>
-        <a href="https://appointments-schedule.netlify.app/">Appointment Scheduler</a> ·
-        <a href="https://keywordcalculator.netlify.app/">Keyword Calculator</a> ·
-        <a href="https://electric-calc.netlify.app/dist/index.html">Electricity Calculator</a> ·
-        <a href="https://qr-code222.netlify.app/">QR Code Generator</a> ·
-        <a href="https://case-converter222.netlify.app/">Case Converter</a> ·
-        <a href="https://picture-compression.netlify.app/">Image Compressor</a>
-      </p>
+    <section id="more-tools" class="tools-section" aria-labelledby="more-tools-title">
+      <div class="tools-heading">
+        <span class="tools-kicker">✨ MORE FREE TOOLS</span>
+        <h2 id="more-tools-title">Explore More Tools</h2>
+        <p>Fast, simple tools for everyday tasks.</p>
+      </div>
+
+      <div class="tools-grid">
+        <a class="tool-card tool-purple" href="https://appointments-schedule.netlify.app/">
+          <span class="tool-icon" aria-hidden="true">📅</span>
+          <span><strong>Appointment Scheduler</strong><small>Plan appointments fast</small></span>
+          <b aria-hidden="true">→</b>
+        </a>
+        <a class="tool-card tool-pink" href="https://keywordcalculator.netlify.app/">
+          <span class="tool-icon" aria-hidden="true">🔎</span>
+          <span><strong>Keyword Calculator</strong><small>Check keyword density</small></span>
+          <b aria-hidden="true">→</b>
+        </a>
+        <a class="tool-card tool-yellow" href="https://electric-calc.netlify.app/dist/index.html">
+          <span class="tool-icon" aria-hidden="true">⚡</span>
+          <span><strong>Electricity Calculator</strong><small>Estimate electricity cost</small></span>
+          <b aria-hidden="true">→</b>
+        </a>
+        <a class="tool-card tool-sky" href="https://qr-code222.netlify.app/">
+          <span class="tool-icon" aria-hidden="true">▦</span>
+          <span><strong>QR Code Generator</strong><small>Create a QR code quickly</small></span>
+          <b aria-hidden="true">→</b>
+        </a>
+        <a class="tool-card tool-mint" href="https://case-converter222.netlify.app/">
+          <span class="tool-icon" aria-hidden="true">Aa</span>
+          <span><strong>Case Converter</strong><small>Change text case instantly</small></span>
+          <b aria-hidden="true">→</b>
+        </a>
+        <a class="tool-card tool-orange" href="https://picture-compression.netlify.app/">
+          <span class="tool-icon" aria-hidden="true">🖼️</span>
+          <span><strong>Image Compressor</strong><small>Reduce image file size</small></span>
+          <b aria-hidden="true">→</b>
+        </a>
+      </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <p>Age Calculator · Free online tool</p>
-    </div>
+    <div class="container"><p>Age Calculator · Free online tool</p></div>
   </footer>
 
   <script src="app.js"></script>
