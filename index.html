@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#6d5dfc">
+  <meta name="robots" content="index, follow">
+  <meta name="description" content="Free age calculator to find your exact age in years, months and days, plus total months, total days and your next birthday.">
+  <title>Age Calculator - Calculate Your Exact Age</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Age Calculator home">Age Calculator</a>
+      <a class="nav-link" href="#how">How it works</a>
+    </div>
+  </header>
+
+  <main id="top" class="container">
+    <section class="hero" aria-labelledby="page-title">
+      <span class="hero-icon" aria-hidden="true">🎂</span>
+      <h1 id="page-title">Age Calculator</h1>
+      <p>Enter your date of birth and get your exact age instantly.</p>
+    </section>
+
+    <div class="ad-slot" aria-label="Advertisement">Advertisement</div>
+
+    <section class="calculator-card" aria-labelledby="calculator-title">
+      <h2 id="calculator-title">Calculate your age</h2>
+      <form id="age-form" novalidate>
+        <div class="field">
+          <label for="birth-date">Date of birth</label>
+          <input id="birth-date" name="birthDate" type="date" required>
+          <p id="date-error" class="error" role="alert"></p>
+        </div>
+        <button class="btn-primary" type="submit">Calculate Age</button>
+      </form>
+
+      <section id="result" class="result" aria-live="polite" hidden>
+        <p class="result-label">Your age is</p>
+        <div class="age-main">
+          <strong id="years">0</strong>
+          <span>Years</span>
+        </div>
+        <p id="age-detail" class="age-detail">0 Months · 0 Days</p>
+
+        <div class="stats-grid">
+          <article class="stat-card">
+            <span>Total Months</span>
+            <strong id="total-months">0</strong>
+          </article>
+          <article class="stat-card">
+            <span>Total Days</span>
+            <strong id="total-days">0</strong>
+          </article>
+          <article class="stat-card">
+            <span>Next Birthday</span>
+            <strong id="next-birthday">0 days</strong>
+          </article>
+        </div>
+      </section>
+    </section>
+
+    <div class="ad-slot" aria-label="Advertisement">Advertisement</div>
+
+    <section id="how" class="info-card">
+      <h2>How it works</h2>
+      <p>Choose your birth date and tap <strong>Calculate Age</strong>. The calculator shows your age using today’s date.</p>
+    </section>
+
+    <section class="info-card faq" aria-labelledby="faq-title">
+      <h2 id="faq-title">Age Calculator FAQ</h2>
+      <details>
+        <summary>How is my age calculated?</summary>
+        <p>Your age is calculated from your birth date to today in completed years, months and days.</p>
+      </details>
+      <details>
+        <summary>Does the calculator save my date of birth?</summary>
+        <p>No. Your date is calculated in your browser and is not stored by this tool.</p>
+      </details>
+      <details>
+        <summary>Is this age calculator free?</summary>
+        <p>Yes. You can use it as often as you like.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Age Calculator · Free online tool</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
