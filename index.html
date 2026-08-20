@@ -13,7 +13,7 @@
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="#top" aria-label="Age Calculator home">Age Calculator</a>
-      <a class="nav-link" href="#more-tools">EXPLORE MORE TOOLS</a>
+      <button class="nav-link" id="open-tools" type="button">EXPLORE MORE TOOLS</button>
     </div>
   </header>
 
@@ -62,8 +62,11 @@
       <details><summary>Does the calculator save my date of birth?</summary><p>No. Your date is calculated in your browser and is not stored by this tool.</p></details>
       <details><summary>Is this age calculator free?</summary><p>Yes. You can use it as often as you like.</p></details>
     </section>
+  </main>
 
-    <section id="more-tools" class="tools-section" aria-labelledby="more-tools-title">
+  <dialog class="tools-modal" id="tools-modal" aria-labelledby="more-tools-title">
+    <div class="tools-modal-inner">
+      <button class="modal-close" id="close-tools" type="button" aria-label="Close tools">×</button>
       <div class="tools-heading">
         <h2 id="more-tools-title">Explore More Tools</h2>
         <p>Fast, simple tools for everyday tasks.</p>
@@ -82,8 +85,8 @@
         <a class="tool-card tool-mint" href="https://keywordcalculator.netlify.app/"><span class="tool-icon">🔎</span><span><strong>Keyword Calculator</strong><small>Check keyword density</small></span><b>→</b></a>
         <a class="tool-card tool-orange" href="https://saving-calculation.netlify.app/"><span class="tool-icon">💰</span><span><strong>Savings Calculator</strong><small>Estimate your savings growth</small></span><b>→</b></a>
       </div>
-    </section>
-  </main>
+    </div>
+  </dialog>
 
   <footer class="site-footer"><div class="container"><p>Age Calculator · Free online tool</p></div></footer>
   <script src="app.js"></script>
